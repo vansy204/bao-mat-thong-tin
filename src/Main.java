@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     //Hệ mã đây
-    public static String Caesar(String Plain, int NumKey){
+    private static String Caesar(String Plain, int NumKey){
         String encrypted = "";
         int n = Plain.length();
 
@@ -23,7 +23,7 @@ public class Main {
         return encrypted;
     }
 
-    public static String decrypt(String Crypted, int NumKey){
+    private static String decrypt(String Crypted, int NumKey){
         String decrypted = "";
         int n = Crypted.length();
 
