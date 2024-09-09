@@ -24,6 +24,23 @@ public class Vingenere {
         return encrypted;
     }
 
+    private static String decrypt(String encrypt, String Key){
+        String decrypted = "";
+        int n = encrypt.length();
+        int m = Key.length();
+
+        for (int i = 0; i < n; i++) {
+            char encryptChar = encrypt.charAt(i);
+            char KeyChar = Key.charAt(i%m);
+            int KeyPos = KeyChar - 'a';
+            encryptChar -= KeyPos;
+            if (encryptChar < 'a')
+                encryptChar += 26;
+            decrypted += encryptChar;
+        }
+        return decrypted;
+    }
+
     public static void main(String[] args) {
         //input
         Scanner sc = new Scanner(System.in);
@@ -35,5 +52,7 @@ public class Vingenere {
         //encrypt and decrypt
         String encrypted = encrypt(Plain, Key);
         System.out.println("Encrypted message: " + encrypted);
+        String decrypted = decrypt(encrypted, Key);
+        System.out.println("Decrypted message: " + decrypted);
     }
 }
