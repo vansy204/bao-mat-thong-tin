@@ -6,10 +6,15 @@ public class RailFence {
         int n = Plain.length();
         char [][]rewrite = new char[2][n / 2 + n % 2];
 
+        //write on two rows
+        //Ex: abcde will become
+        //a c e
+        //b d
         for (int i = 0; i < n; i++) {
             rewrite[i % 2][i / 2] = Plain.charAt(i);
         }
 
+        //iterate 2 rows and add them to Encrypted string
         for (int i = 0; i <= 1; i++){
             for (int j = 0; j < n/2 + n % 2 - i*(n%2); j++){
                 Encrypted += rewrite[i][j];
@@ -24,6 +29,11 @@ public class RailFence {
         char [][]rewrite = new char[2][n / 2 + n % 2];
 
         int cnt = 0;
+        //write on two rows
+        //write on two rows
+        //Ex: acebd will become
+        //a c e
+        //b d
         for (int i = 0; i <= 1; i++) {
             for (int j = 0; j < n/2 + n % 2 - i*(n%2); j++){
                 rewrite[i % 2][j] = Encrypted.charAt(cnt);
@@ -31,12 +41,14 @@ public class RailFence {
             }
         }
 
+        //iterate 2 rows and add them to Decrypted string
         for (int j = 0; j < n/2; j++){
-            for (int i = 0; i <= 1; i++)
-                Decrypted += rewrite[i][j];
+            Decrypted += rewrite[0][j];
+            Decrypted += rewrite[1][j];
         }
+        //add the last column to Decrypted if the number of characters is odd
         if (n % 2 != 0)
-            Decrypted += rewrite[0][n/2 + 1];
+            Decrypted += rewrite[0][n/2];
         return Decrypted;
     }
 
