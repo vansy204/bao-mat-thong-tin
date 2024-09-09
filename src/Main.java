@@ -1,34 +1,63 @@
-public class Main {
+import java.util.Scanner;
 
+public class Main {
+    //Hệ mã đây
     public static String Caesar(String Plain, int NumKey){
         String encrypted = "";
         int n = Plain.length();
 
         for (int i = 0; i < n; i++) {
-            //ký tự thứ i trong tin gốc
+            //i-th character in plain text
             char PlainChar = Plain.charAt(i);
 
-            //đẩy lên *NumKey* ký tự
+            //push it up NumKey characters
             PlainChar += NumKey;
 
-            //nếu qua ký tự 'z' thì quay lại 'a'
+            //if it passes 'z', then push it back down 26 characters
+            //'z' + 1 -> 'a', 'z' + 2 -> 'b', ...
             if (PlainChar > 'z')
-                PlainChar = 'a';
+                PlainChar -= 26;
 
             encrypted = encrypted + PlainChar;
         }
         return encrypted;
     }
 
+    public static String decrypt(String Crypted, int NumKey){
+        String decrypted = "";
+        int n = Crypted.length();
+
+        for (int i = 0; i < n; i++) {
+            //i-th character in encrypted text
+            char EncryptedChar = Crypted.charAt(i);
+
+            //push it down NumKey chatacters
+            EncryptedChar -= NumKey;
+
+            //if it smaller than 'a', push it up 26 characters again
+            //'a' - 1 -> 'z', 'a' - 2 -> 'b', etc.
+            if (EncryptedChar < 'a')
+                EncryptedChar += 26;
+
+            decrypted = decrypted + EncryptedChar;
+        }
+        return decrypted;
+    }
+
     public static void main(String[] args) {
-        int NumKey = 5; //key that are numbers, used in Caesar, and part of permutation
+        //input
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input Key: ");
+        int NumKey = sc.nextInt();
+        System.out.print("Input plain text: ");
+        String Plain = sc.next();
 
-        //Key that is a String, used in other methods
-        String Stringkey = "";
+        //encrypt
+        String Encrypted = Caesar(Plain, NumKey);
+        System.out.println("Encrypted: " + Encrypted);
 
-        //Plain text
-        String Plain = "skibididomdomyesyes";
-
-        System.out.println(Caesar(Plain, NumKey));
+        //decrypt
+        String Decrypted = decrypt(Encrypted, NumKey);
+        System.out.println("Decrypted: " + Decrypted);
     }
 }
