@@ -42,7 +42,7 @@ public class Vingenere {
     }
 
     private static String GenerateNewKey(String Plain, String key){
-        String NewKey = key;
+        String NewKey = key ;
         int n = Plain.length();
         int m = key.length();
         NewKey += Plain.substring(0, n - m);
