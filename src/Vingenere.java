@@ -41,10 +41,18 @@ public class Vingenere {
         return decrypted;
     }
 
+    private static String GenerateNewKey(String Plain, String key){
+        String NewKey = key;
+        int n = Plain.length();
+        int m = key.length();
+        NewKey += Plain.substring(0, n - m);
+        return NewKey;
+    }
+
     public static void main(String[] args) {
         //input
         Scanner sc = new Scanner(System.in);
-        System.out.print("input Plain message: ");
+        System.out.print("input plain message: ");
         String Plain = sc.nextLine();
         System.out.print("input key: ");
         String Key = sc.nextLine();
