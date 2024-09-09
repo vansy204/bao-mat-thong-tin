@@ -44,7 +44,8 @@ public class DonBang {
         Scanner scan = new Scanner(System.in);
         System.out.print("Input Plain message: ");
         String Plain = scan.nextLine();
-
+      
+        //encrypt and decrypt
         String encrypted = encrypt(Plain, StringKey);
         System.out.println("encrypted Plain message: " + encrypted);
         String decrypted = decrypt(encrypted, StringKey);
