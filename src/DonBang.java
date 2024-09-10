@@ -2,7 +2,7 @@
 This file contains the code of substitution cipher method (2.2.2 in the book)
 see more about the cipher here: https://en.wikipedia.org/wiki/Substitution_cipher
 if you have any questions/suggestions, feel free to contact us about it
-Thanks for reading this, enjoy the rest of your day :)
+Thanks for reading this and enjoy the rest of your day :)
  */
 
 import java.util.Scanner;
@@ -43,8 +43,8 @@ public class DonBang {
     }
 
     public static void main(String[] args) {
-        //khóa dùng trong thay thế đơn bảng có độ dài là 26, ứng với 26 ký tự trong bảng chữ cái
-        //a sẽ được thay thế bằng ký tự đầu tiên trong key, b là ký tự thứ hai, c thứ ba, ... z ứng với chữ cái cuối cùng
+        //the key used in this method is 26 letters long, corresponding to 26 letters in the English alphabet
+        //'a' will be replaced with the 1st letter in the key, 'b' is 2nd, 'c' is 3rd, etc.
         String StringKey = "qazwsxedcrfvtgbyhnujmikolp";
 
         //input
