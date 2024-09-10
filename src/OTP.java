@@ -11,7 +11,7 @@ public class OTP extends Vingenere {
     /*
     to my understanding, OTP can be used with any cryptography techniques, as long as
     the keys are used once and changing each time
-    I will combine it substitution technique here, since it is similar in our book and on wiki page
+    I will combine it Vingenere's technique here, since it is similar in our book and on wiki page
      */
 
     protected static String RandomGeneratedKey(int length) {
