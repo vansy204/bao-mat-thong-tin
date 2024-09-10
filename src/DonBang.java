@@ -2,7 +2,7 @@
 This file contains the code of substitution cipher method (2.2.2 in the book)
 see more about the cipher here: https://en.wikipedia.org/wiki/Substitution_cipher
 if you have any questions/suggestions, feel free to contact us about it
-Thanks for reading this, enjoy the rest of your day :)
+Thanks for reading this and enjoy the rest of your day :)
  */
 
 import java.util.Scanner;
