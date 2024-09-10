@@ -1,5 +1,5 @@
 /*
-This file contains the code of substitution cipher method (2.2.2 in the book)
+This file contains the code of substitution cipher technique (2.2.2 in the book)
 see more about the cipher here: https://en.wikipedia.org/wiki/Substitution_cipher
 if you have any questions/suggestions, feel free to contact us about it
 Thanks for reading this and enjoy the rest of your day :)
@@ -8,7 +8,7 @@ Thanks for reading this and enjoy the rest of your day :)
 import java.util.Scanner;
 
 public class DonBang {
-    private static String encrypt(String Plain, String Key){
+    protected static String encrypt(String Plain, String Key){
         String Encrypted = "";
         int n = Plain.length();
 
@@ -22,7 +22,7 @@ public class DonBang {
         return Encrypted;
     }
 
-    private static String decrypt(String encrypted, String Key){
+    protected static String decrypt(String encrypted, String Key){
         String Decrypted = "";
         int n = encrypted.length();
 

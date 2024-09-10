@@ -1,6 +1,6 @@
 /*
 IMPORTANT
-This file contains the code of Caesar cipher (shift) method (2.2.1 in the book)
+This file contains the code of Caesar cipher (shift) technique (2.2.1 in the book)
 sorry for the confusing file name, but idk how to change the filename once I've pushed it
 to GitHub :)
 if you have any questions/suggestions, feel free to contact us about it
@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
     //Hệ mã đây
-    private static String Caesar(String Plain, int NumKey){
+    protected static String Caesar(String Plain, int NumKey){
         String encrypted = "";
         int n = Plain.length();
 
@@ -32,7 +32,7 @@ public class Main {
         return encrypted;
     }
 
-    private static String decrypt(String Crypted, int NumKey){
+    protected static String decrypt(String Crypted, int NumKey){
         String decrypted = "";
         int n = Crypted.length();
 

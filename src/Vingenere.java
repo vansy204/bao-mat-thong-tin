@@ -1,5 +1,5 @@
 /*
-This is the code for Vingenere's cipher method (2.2.3 in the book)
+This is the code for Vingenere's cipher technique (2.2.3 in the book)
 if you have any questions/suggestions, feel free to contact us about it
 Thanks for reading this, enjoy the rest of your day :)
 */
