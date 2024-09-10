@@ -1,3 +1,12 @@
+/*
+This is the code for Rail Fence cipher method (2.3.1 in the book)
+see more about it here: https://en.wikipedia.org/wiki/Rail_fence_cipher
+the article says that there are three rails in the cipher method, but
+we are taught to use 2 in school book, so this program only use 2 rows as you can see below
+if you have any questions/suggestions, feel free to contact us about it
+Thanks for reading this, enjoy the rest of your day :)
+*/
+
 import java.util.Scanner;
 
 public class RailFence {
