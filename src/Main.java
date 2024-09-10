@@ -1,3 +1,12 @@
+/*
+IMPORTANT
+This file contains the code of Caesar cipher (shift) method (2.2.1 in the book)
+sorry for the confusing file name, but idk how to change the filename once I've pushed it
+to GitHub :)
+if you have any questions/suggestions, feel free to contact us about it
+Thanks for reading this, enjoy the rest of your day :)
+ */
+
 import java.util.Scanner;
 
 public class Main {
