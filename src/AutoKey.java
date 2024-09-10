@@ -1,5 +1,5 @@
 /*
-This is the code for Vingenere's cipher method, but with autokey (2.2.3 in the book)
+This is the code for Vingenere's cipher technique, but with autokey (2.2.4 in the book)
 see more here https://en.wikipedia.org/wiki/Autokey_cipher
 if you have any questions/suggestions, feel free to contact us about it
 Thanks for reading this, enjoy the rest of your day :)
@@ -8,7 +8,7 @@ Thanks for reading this, enjoy the rest of your day :)
 import java.util.Scanner;
 
 public class AutoKey extends Vingenere {
-    private static String GenerateNewKey(String Plain, String key){
+    protected static String GenerateNewKey(String Plain, String key){
         String NewKey = key ;
         int n = Plain.length();
         int m = key.length();

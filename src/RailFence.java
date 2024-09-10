@@ -1,5 +1,5 @@
 /*
-This is the code for Rail Fence cipher method (2.3.1 in the book)
+This is the code for Rail Fence cipher technique (2.3.1 in the book)
 see more about it here: https://en.wikipedia.org/wiki/Rail_fence_cipher
 the article says that there are three rails in the cipher method, but
 we are taught to use 2 in school book, so this program only use 2 rows as you can see below
@@ -10,7 +10,7 @@ Thanks for reading this, enjoy the rest of your day :)
 import java.util.Scanner;
 
 public class RailFence {
-    private static String encrypt(String Plain){
+    protected static String encrypt(String Plain){
         String Encrypted = "";
         int n = Plain.length();
         char [][]rewrite = new char[2][n / 2 + n % 2];
@@ -32,7 +32,7 @@ public class RailFence {
         return Encrypted;
     }
 
-    private static String decrypt(String Encrypted){
+    protected static String decrypt(String Encrypted){
         String Decrypted = "";
         int n = Encrypted.length();
         char [][]rewrite = new char[2][n / 2 + n % 2];
