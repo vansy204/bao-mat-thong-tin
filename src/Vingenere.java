@@ -1,8 +1,13 @@
+/*
+This is the code for Vingenere's cipher method (2.2.3 in the book)
+if you have any questions/suggestions, feel free to contact us about it
+Thanks for reading this, enjoy the rest of your day :)
+*/
 import java.util.Scanner;
 
 public class Vingenere {
 
-    private static String encrypt(String Plain, String Key){
+    protected static String encrypt(String Plain, String Key){
         String encrypted = "";
         int n = Plain.length();
         int m = Key.length();
@@ -24,7 +29,7 @@ public class Vingenere {
         return encrypted;
     }
 
-    private static String decrypt(String encrypt, String Key){
+    protected static String decrypt(String encrypt, String Key){
         String decrypted = "";
         int n = encrypt.length();
         int m = Key.length();
@@ -39,14 +44,6 @@ public class Vingenere {
             decrypted += encryptChar;
         }
         return decrypted;
-    }
-
-    private static String GenerateNewKey(String Plain, String key){
-        String NewKey = key ;
-        int n = Plain.length();
-        int m = key.length();
-        NewKey += Plain.substring(0, n - m);
-        return NewKey;
     }
 
     public static void main(String[] args) {
